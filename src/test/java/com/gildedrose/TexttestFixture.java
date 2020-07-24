@@ -8,16 +8,16 @@ public class TexttestFixture {
     @Test
     void _result_should_be_as_expected() {
         Item[] items = new Item[] {
-                new Item("+5 Dexterity Vest", 10, 20), //
-                new Item("Aged Brie", 2, 0), //
-                new Item("Elixir of the Mongoose", 5, 7), //
-                new Item("Sulfuras, Hand of Ragnaros", 0, 80), //
-                new Item("Sulfuras, Hand of Ragnaros", -1, 80),
-                new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-                new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49),
-                new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49),
+                new DefaultItem("+5 Dexterity Vest", 10, 20), //
+                new AgedBrieItem(2, 0, "Aged Brie"), //
+                new DefaultItem("Elixir of the Mongoose", 5, 7), //
+                new SulfurasItem(0, 80, "Sulfuras, Hand of Ragnaros"), //
+                new SulfurasItem(-1, 80, "Sulfuras, Hand of Ragnaros"),
+                new BackstagePassesItem(15, 20, "Backstage passes to a TAFKAL80ETC concert"),
+                new BackstagePassesItem(10, 49, "Backstage passes to a TAFKAL80ETC concert"),
+                new BackstagePassesItem(5, 49, "Backstage passes to a TAFKAL80ETC concert"),
                 // this conjured item does not work properly yet
-                new Item("Conjured Mana Cake", 3, 6) };
+                new DefaultItem("Conjured Mana Cake", 3, 6) };
 
         GildedRose app = new GildedRose(items);
 
