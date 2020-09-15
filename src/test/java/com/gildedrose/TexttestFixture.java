@@ -29,7 +29,7 @@ public class TexttestFixture {
             for (Item item : items) {
                 result.append(item).append("\n");
             }
-            app.updateQuality();
+            app.updateItem();
         }
 
         System.out.println(result);

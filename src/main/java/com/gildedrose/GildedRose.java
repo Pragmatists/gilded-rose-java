@@ -7,11 +7,12 @@ class GildedRose {
         this.items = items;
     }
 
-    public void updateQuality() {
+    public void updateItem() {
         for (Item item : items) {
-            ItemUpdater itemUpdater = new ItemUpdater();
+            ItemUpdater itemUpdater = new ItemUpdaterFactory().getItemUpdater(item);
             itemUpdater.updateQuality(item);
-            itemUpdater.updateAfterExpiration(item);
+            itemUpdater.updateAfterExpired(item);
         }
     }
+
 }

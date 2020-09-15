@@ -30,6 +30,10 @@ public class Item {
         sellIn = sellIn - 1;
     }
 
+    boolean isExpired() {
+        return sellIn < 0;
+    }
+
    @Override
    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
